@@ -1,0 +1,10 @@
+.blocks-container.pull-left
+  .block.block1{ "ng-show" => "activePage == 'jobs'" }
+  .block.block2{ "ng-show" => "activePage == 'skills'" }
+    .skills-header
+      %h1 Skills
+    .skills-table{ "ng-controller" => "skillsController" }
+      .skill{ "ng-repeat" => "skill in skills", "ng-mouseover" => "hoverIn()", "ng-mouseleave" => "hoverOut()" }
+        %p.skill-name.img-circle.text-center{ "ng-class" => "hoverSkill" } {{ skill.name }}
+        %img.skill-image.img-circle{ "ng-src" => "{{ skill.url }}" }
+      .clearfix
