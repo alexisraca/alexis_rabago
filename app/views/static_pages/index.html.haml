@@ -1,10 +1,62 @@
 .blocks-container.pull-left
-  .block.block1{ "ng-show" => "activePage == 'jobs'" }
-  .block.block2{ "ng-show" => "activePage == 'skills'" }
-    .skills-header
+  .block.block1.about-me{ "ng-show" => "activePage == 'About'" }
+    .block-header
+      %h1 About Me
+      
+    .block-content
+      %h2 Hello My Name Is Alexis
+      %p After many years proving myself as a computer technician, working locally as freelance and employee, I decided to find a deeper and wider scope on computer sciences. Before I could even say guacamole I finished my studies on Network Ingeniering and started dedicating myself on making web pages. To find a good job at first was hard because of my carreer focus on CISCO systems (very helpful after a while), but with some effort, taking chances and support from my beloved ones I found a place to be, it is Web Development. Without a warning I got inlove with Ruby on Rails and started my path through it. 
+      
+      %p Every day learning and improving my skills is a never ending goal, but one that gives me joy, the love for new things to see, riddles, problem solving and the unstopable challenge of life itself, this is the carrer I wanted.
+
+  .block.block2.jobs{ "ng-show" => "activePage == 'Jobs'" }
+    .block-header
+      %h1 Jobs
+    .block-content.media.job
+      .media-left
+        = link_to "http://www.etherpros.com/index.html", target: "_blank" do
+          = image_tag "etherpros.png", class: "jobs-image"
+      .media-body
+        %h2.media-heading= link_to "Etherpros", "http://www.etherpros.com/index.html", target: "_blank"
+        %p My first serious job on web development, From June 2013 to date one of the best places I have worked at as Ruby on Rails developer, making multiple tasks from bug smashing, front/back end to feature development.
+
+  .block.block3{ "ng-show" => "activePage == 'Skills'" }
+    .block-header
       %h1 Skills
     .skills-table{ "ng-controller" => "skillsController" }
       .skill{ "ng-repeat" => "skill in skills", "ng-mouseover" => "hoverIn()", "ng-mouseleave" => "hoverOut()" }
         %p.skill-name.img-circle.text-center{ "ng-class" => "hoverSkill" } {{ skill.name }}
         %img.skill-image.img-circle{ "ng-src" => "{{ skill.url }}" }
       .clearfix
+
+
+  .block.block4.contacts{ "ng-show" => "activePage == 'Contact'", "ng-controller" => "contactController" }
+    .block-header
+      %h1 Contact
+    .block-content.vertical-block-content.contact
+      %blockquote
+        %p Coding
+        %footer Alexis Rabago Carvajal
+        %footer= mail_to "alexisraca@hotmail.com"
+
+      %ul
+        %li{ "ng-repeat" => "contact in alexis", "ng-mouseover" => "hoverIn()", "ng-class" => "hoverContact", "ng-mouseout" => "hoverOut()" }
+          = link_to "{{ contact.url }}", target: "_blank" do
+            %img.social-icon{ src: "/assets/{{contact.image}}"}
+            %span
+              {{contact.name}}
+
+    .block-content.vertical-block-content.contact
+      %blockquote
+        %p Design/Art
+        %footer
+        %footer= mail_to "alexisraca@hotmail.com"
+      %ul
+        %li{ "ng-repeat" => "contact in yun", "ng-mouseover" => "hoverIn()", "ng-class" => "hoverContact", "ng-mouseout" => "hoverOut()" }
+          = link_to "{{ contact.url }}", target: "_blank" do
+            %img.social-icon{ src: "/assets/{{contact.image}}"}
+            %span
+              {{contact.name}}
+  
+        
+      

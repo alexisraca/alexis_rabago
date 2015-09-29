@@ -1,37 +1,83 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin transition($time) {
+  -webkit-transition: $time linear all;
+  -moz-transition: $time linear all;
+  -o-transition: $time linear all;
+  transition: $time linear all;
+}
+
 body{
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .sidebar{
-  width:20%;
-  height:100%;
-  position:relative;
-  display:inline-block;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  background-color: #fdfdfb;
+  .thumbnail{
+    border: 0;
+    margin-top: 50%;
+    background: inherit;
+    background-color: #fdfdfb;
+  }
+  .profile-image{
+    width: 80%;
+    height: 80%;
+    margin: 0 10%;
+    border: 3px solid black;
+  }
+}
+
+.menu{
+  width: 80%;
+  margin: 0 10%;
+  padding: 0;
+  .menu-link{
+    list-style: none;
+    padding: 5px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+  }
+  .menu-link a{
+    display: block;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .hover-menu{
+    background-color: rgba(188,30,30,0.7);
+    a{ color: white; }
+  }
 }
 
 .blocks-container{
-  width:80%;
-  height:100%;
-  overflow:auto;
-  position:relative;
-  display:inline-block;
-  background-image: image-url("portd.jpg");
-  background-size:100% 100%;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  display: inline-block;
+  background-image: image-url("portda.jpg");
+  background-size: 100% 100%;
 }
 
 .block{
   width:100%;
+  position:relative;
 }
 
 .block1{
-
+  height:100%;
 }
 
 .block2{
+
+}
+
+.block3{
 
 }
 
@@ -43,26 +89,71 @@ body{
   opacity:1;
 }
 
-
-
-
-
-
-.skills-header{
-  height:30%;
+.block-header{
+  font-family:"Courier New", Courier, monospace;
   width:100%;
   display:table;
   h1{
+    /* RGBa with 0.6 opacity */
+    background: rgba(43,40,40, 0.7);
+    color:white;
+    padding:10px 10px 10px 5%;
     display:table-cell;
     margin-top:0;
+    font-size:50px;
     vertical-align:middle
   }
 }
 
+.block-content, .vertical-block-content{
+  font-family:"Courier New", Courier, monospace;
+  width:100%;
+  height:75%;
+  margin:5% 0;
+  padding:3%;
+  background: rgba(43,40,40, 0.7);
+  position:relative;
+  color:white;
+  font-size:20px;
+}
+
+.vertical-block-content{
+  width:47.5%;
+  margin:5% 5% 5% 0;
+  float:left;
+}
+
+
+// ---------
+
+.contacts{
+  .vertical-block-content:last-child{
+    margin: 5% 0 5% 0%;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  li{
+    margin-top:10px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  blockquote p{
+    font-size:27px;
+  }
+  footer{
+    color:white;
+  }
+}
+
+//---------
 
 .skills-table{
   width:90%;
-  margin:20px 5% 0 5%;
+  margin:20px 0 0 5%;
   .skill{
     width:130px;
     height:130px;
@@ -82,15 +173,12 @@ body{
     padding: 55px 0 0 0;
   }
   .skill-name-display, .skill-name-display{
-    -webkit-transition:0.4s linear all;
-    -moz-transition:0.4s linear all;
-    -o-transition:0.4s linear all;
-    transition:0.4s linear all;
+    @include transition(0.4s);
     opacity:1;
     /* Fallback for web browsers that doesn't support RGBa */
-    background: rgb(0, 0, 0);
+    background: rgb(188,30,30);
     /* RGBa with 0.6 opacity */
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(188,30,30, 0.7);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
@@ -101,6 +189,31 @@ body{
     height:80%;
     margin:10% 0 0 10%;
     background-color:white;
-    border:1px solid black;
+    border:2px solid black;
+  }
+}
+
+
+// --------------------
+
+.jobs-image{
+  width:150px;
+  height:150px;
+  background-color:white;
+}
+
+.job{
+  .media-heading a{ color: white; text-decoration: none;}
+}
+
+// ----------------------
+
+.contact{
+  .social-icon{
+    width:100px;
+    height:100px;
+  }
+  .hover-contact a{
+    color: rgb(188,30,30);
   }
 }

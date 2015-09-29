@@ -8,7 +8,12 @@
     = csrf_meta_tags
   %body{ "ng-app" => "resume", "ng-controller" => "navigationController" }
     .sidebar.pull-left
-      =link_to  "jobs", "#", "ng-click" => "navigateTo('jobs')"
-      =link_to "skills", "#", "ng-click" => "navigateTo('skills')"
+      .thumbnail
+        = image_tag "profile.jpg", class: "img-circle profile-image"
+        .caption
+          %ul.menu
+            %li.menu-link{ "ng-repeat" => "menu in menus", "ng-mouseover" => "hoverIn()", "ng-class" => "hoverMenu", "ng-mouseout" => "hoverOut()" }
+              %a{ href: "#", class: "text-center", "ng-click" => "navigateTo(menu)"}
+                {{menu}}
     = yield
     .clearfix

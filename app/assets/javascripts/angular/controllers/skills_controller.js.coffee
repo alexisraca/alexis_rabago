@@ -26,10 +26,10 @@
     { name: "OmniAuth", url: "" },
     { name: "More to Come", url: "" }
   ]
-  
+
   $scope.hoverIn = ->
     @hoverSkill = "skill-name-display"
-    
+
   $scope.hoverOut = ->
     @hoverSkill = ""
 ]
