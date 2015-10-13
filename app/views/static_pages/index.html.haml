@@ -5,9 +5,9 @@
       
     .block-content
       %h2 Hello My Name Is Alexis
-      %p After many years proving myself as a computer technician, working locally as freelance and employee, I decided to find a deeper and wider scope on computer sciences. Before I could even say guacamole I finished my studies on Network Ingeniering and started dedicating myself on making web pages. To find a good job at first was hard because of my carreer focus on CISCO systems (very helpful after a while), but with some effort, taking chances and support from my beloved ones I found a place to be, it is Web Development. Without a warning I got inlove with Ruby on Rails and started my path through it. 
-      
-      %p Every day learning and improving my skills is a never ending goal, but one that gives me joy, the love for new things to see, riddles, problem solving and the unstopable challenge of life itself, this is the carrer I wanted.
+      %p Web developer, network engineer, video games enthusiast, cycling amateur and much more. Learning and working on web development wasn't my first idea of a dream job at first, many years of proving myself as a computer technician, working locally as freelance and employee wasn't enough. One day I decided to find a deeper and wider scope on computer sciences and before I could even say guacamole, my studies on network engineering career finished first was hard because of my career focus on CISCO systems (very helpful after a while), but with some effort, taking chances and support from my beloved ones I found a place to be, it is Web Development. Without a warning, I got in love with Ruby on Rails and started my path through it.
+
+      %p Every day learning and improving my skills is a never ending goal, but one that gives me joy, the love for new things to see, riddles, problem-solving and the unstoppable challenge of life itself, this is the career I wanted.
 
   .block.block2.jobs{ "ng-show" => "activePage == 'Jobs'" }
     .block-header
@@ -18,7 +18,7 @@
           = image_tag "etherpros.png", class: "jobs-image"
       .media-body
         %h2.media-heading= link_to "Etherpros", "http://www.etherpros.com/index.html", target: "_blank"
-        %p My first serious job on web development, From June 2013 to date one of the best places I have worked at as Ruby on Rails developer, making multiple tasks from bug smashing, front/back end to feature development.
+        %p My first serious job on web development, From June 2013 to date one of the best places I have worked at as Ruby on Rails developer, making multiple tasks: bug smashing, front/back end, QA, etc.
 
   .block.block3{ "ng-show" => "activePage == 'Skills'" }
     .block-header
@@ -49,8 +49,8 @@
     .block-content.vertical-block-content.contact
       %blockquote
         %p Design/Art
-        %footer
-        %footer= mail_to "alexisraca@hotmail.com"
+        %footer Estephania Tirado Duran
+        %footer= mail_to "tiraduran@gmail.com"
       %ul
         %li{ "ng-repeat" => "contact in yun", "ng-mouseover" => "hoverIn()", "ng-class" => "hoverContact", "ng-mouseout" => "hoverOut()" }
           = link_to "{{ contact.url }}", target: "_blank" do

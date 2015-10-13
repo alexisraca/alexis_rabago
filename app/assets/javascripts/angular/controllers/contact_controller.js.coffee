@@ -8,12 +8,11 @@
   ]
 
   $scope.yun = [
-    { name: "Pinterest", url: "", image: "social-pinterest.png" },
-    { name: "Facebook", url: "", image: "social-facebook.png" }
+    { name: "Pinterest", url: "https://www.pinterest.com/yuunyapy", image: "social-pinterest.png" },
+    { name: "Facebook", url: "https://www.facebook.com/Garabateandoando", image: "social-facebook.png" }
   ]
 
   $scope.hoverIn = ->
-    console.log
     @hoverContact = "hover-contact"
 
   $scope.hoverOut = ->
