@@ -14,11 +14,19 @@
       %h1 Jobs
     .block-content.media.job
       .media-left
+        = link_to "#" do
+          = image_tag "freelance.png", class: "jobs-image"
+      .media-body
+        %h2.media-heading= link_to "Freelance", "#"
+        %p Like most people at the begining I worked as a normal freelance, going with the wind, low budget, direct contact with the clients. A very hard job but quite interesting because it was the time I learned the most.
+
+    .block-content.media.job
+      .media-left
         = link_to "http://www.etherpros.com/index.html", target: "_blank" do
           = image_tag "etherpros.png", class: "jobs-image"
       .media-body
         %h2.media-heading= link_to "Etherpros", "http://www.etherpros.com/index.html", target: "_blank"
-        %p My first serious job on web development, From June 2013 to date one of the best places I have worked at as Ruby on Rails developer, making multiple tasks: bug smashing, front/back end, QA, etc.
+        %p My first long term job on web development. From June 2013 to date, one of the best places I have worked at as Ruby on Rails developer, making multiple tasks: bug smashing, front/back end, QA, etc.
 
   .block.block3{ "ng-show" => "activePage == 'Skills'" }
     .block-header
