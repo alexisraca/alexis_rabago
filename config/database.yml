@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: alexis_rabago
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: alexisrabagocarvajal
+  password: Monitos2?
